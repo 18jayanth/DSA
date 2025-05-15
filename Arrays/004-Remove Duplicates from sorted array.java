@@ -1,3 +1,5 @@
+//two pointer approach , check if arr[i] != arr[j] then change the element next to i with arr[j] and move i to next element(exchanged element)
+//so that all the elements left to i are unique
 class Solution {
     public int removeDuplicates(int[] nums) {
         int i=0;
