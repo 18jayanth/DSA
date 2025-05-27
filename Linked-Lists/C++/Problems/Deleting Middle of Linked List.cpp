@@ -4,20 +4,13 @@ public:
         if(head==NULL || head->next==NULL) return NULL;
        ListNode* slow=head;
        ListNode* fast=head;
-       int steps=0;
+       fast=fast->next->next;
        while(fast!=NULL && fast->next!=NULL) 
        {
-        steps++;
-        if(steps>1)
-        {
            slow=slow->next;
-        }
-        fast=fast->next->next;
+           fast=fast->next->next;
        }
-       
-       slow->next=slow->next->next;
-       
+      slow->next=slow->next->next;
        return head;
-
     }
 };
