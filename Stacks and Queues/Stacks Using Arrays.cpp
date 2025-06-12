@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
-int  push(int x ,int &top, int st[])
+int  push(int x ,int maxsize,int &top, int st[])
 {
-	if(top==11) cout<<"Stack Overflow"<<"\n";
+	if(top==maxsize) cout<<"Stack Overflow"<<"\n";
 	else{
 	
 	top+=1;
@@ -32,14 +32,15 @@ void size(int &top)
 int main()
 {
 	int top=-1;
-	int st[10];
-	push(5,top,st);
+	int maxsize;
+	int st[maxsize];
+	push(5,maxsize,top,st);
 	topelement(top,st);
 	pop(top,st);
 	topelement(top,st);
-	push(6,top,st);
-	push(7,top,st);
-	push(8,top,st);
+	push(6,maxsize,top,st);
+	push(7,maxsize,top,st);
+	push(8,maxsize,top,st);
 	topelement(top,st);
 	pop(top,st);
 	topelement(top,st);
