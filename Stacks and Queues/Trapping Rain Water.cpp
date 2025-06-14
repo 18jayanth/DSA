@@ -13,6 +13,8 @@ public:
           //base condition total=total +min(leftmax,rightmax)-height[i]
           //if height[left] is smaller than right then left  may hold some water
           //if it is less than left max only then it can hold water or update the left max
+
+            //focussing on small heights !!!
             if(height[left]<=height[right])
             {
                 if(leftmax<=height[left])
