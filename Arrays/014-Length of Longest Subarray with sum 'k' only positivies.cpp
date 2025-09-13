@@ -2,24 +2,26 @@
 using namespace std;
 int main()
 {
-	vector<int>arr={1,1,2,2,3,1,1,1,1,2,3};
+	 vector<int> a = {2, 3, 5, 1, 9};
+     long long k = 10;
+	long long sum=a[0];
 	int left=0;
 	int right=0;
-	int maxlen=0;
-	int sum=0;
-	int k=6;
-	int n=arr.size();
+	int n=a.size();
 	while(right<n)
-	{
-		sum+=arr[right];
-		if(sum==k)
-		maxlen=max(maxlen,right-left+1);
-		if(sum>k)
-		left++;
-		right++;
-	}
-	cout<<maxlen;
+		{
+if(left<=right && sum>k)
+{
+sum-=a[left];
+	left++;
+}
+if(sum==k)
+	maxi=max(maxi,right-left+1);
+right++;
+if(right<n) sum+=a[right[;
 	
+}
+return maxi;
 }
 //Time complexity:o(2N)
 //Space Complexity:o(1)
