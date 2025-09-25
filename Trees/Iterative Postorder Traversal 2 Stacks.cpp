@@ -12,6 +12,11 @@ class Node{
 		right=NULL;
 	}
 };
+//TC=0(N)
+//SC=0(2N)
+//keep root in st1 then push it to st2 if left and right exists push it to st1
+//traverse the st2 stack to get th result
+
 vector<int> post_order(Node*root)
 {
 	
@@ -54,4 +59,5 @@ int main()
 	vector<int>ans=post_order(root);
 	print(ans);
 	
+
 }
