@@ -12,7 +12,15 @@ class Node{
 		right=NULL;
 	}
 };
-vector<vector<int>> iterative_order(Node*root)
+
+//store the root and 1 in stack
+//pop the last item  in the stack
+//if num==1 push to preorder array and push it again to stack but with num=2 if it has left push it with num=1
+//if num==2 push to inorder array and push it agian to stack with num=3 if it has right push it with num=1
+//if num=3 push it to postorder array 
+//TC=0(3*N) iterating thrice every node
+//SC=0(3*N) three arrays being used
+vector<vector<int>> threetraversals(Node*root)
 {
 	stack<pair<Node*,int>>st;
 	vector<int>pre,in,post;
@@ -80,8 +88,9 @@ int main()
 	root->left->right=new Node(a[3]);
 	root->right->left=new Node(a[5]);
 	root->right->right=new Node(a[6]);
-	vector<vector<int>>ans=iterative_order(root);
+	vector<vector<int>>ans=threetraversals(root);
 	print(ans);
 	
 
 }
+
