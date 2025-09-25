@@ -12,6 +12,11 @@ class Node{
 		right=NULL;
 	}
 };
+//TC=0(2n) while loop 
+//SC=0(n) for stack
+//go extreme left and if no left turn to right and repeat
+//if no right and left push to ans and check if the element if right to above ele if yes push that to ans and repeat till all the right 
+//elements are finished
 vector<int> post_order(Node*root)
 {
 	vector<int>ans;
@@ -31,6 +36,7 @@ vector<int> post_order(Node*root)
 	
 		
 	Node* temp=st.top()->right;
+		//if right does not exist
 	if(temp==NULL)
 	{
 		temp=st.top();
@@ -44,6 +50,7 @@ vector<int> post_order(Node*root)
 	 
 	 }
 	}
+		//if right exists
 	else
 	{
 		curr=temp;
@@ -73,4 +80,5 @@ int main()
 	vector<int>ans=post_order(root);
 	print(ans);
 	
+
 }
