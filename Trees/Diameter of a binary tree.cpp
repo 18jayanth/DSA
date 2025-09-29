@@ -12,6 +12,7 @@ int maxdepth(TreeNode*root,int &maxi)
         int diameter=0;
         maxdepth(root,diameter);
         return diameter;
+    }
         
     
 };
