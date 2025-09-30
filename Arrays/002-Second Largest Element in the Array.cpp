@@ -3,6 +3,7 @@ class Solution {
   public:
     int getSecondLargest(vector<int> &arr) {
         // code here
+      //we should keep -1 for both else we cant return -1 if dont have second maxi
         int sec_largest=-1;
         int large=-1;
         for(int i=0;i<arr.size();i++)
