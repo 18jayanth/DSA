@@ -1,29 +1,24 @@
-class Solution {
-public:
-    void moveZeroes(vector<int>& nums) {
-        int j=-1;
-
-        for(int i=0;i<nums.size();i++)
+  void pushZerosToEnd(vector<int>& arr) {
+        // code here
+      //count the zeros and push the non zeros to before
+    //TC:0(n)
+        int zeros=0;
+        int k=0;
+        int n=arr.size();
+        for(int i=0;i<n;i++)
         {
-            if(nums[i]==0)
-            {
-                j=i;
-                break;
+            if(arr[i]==0)
+            
+            zeros++;
+            else
+            arr[k++]=arr[i];
             }
-        }
-        if(j!=-1)
+      //add zeros at the end
+        for(int i=n-zeros;i<n;i++)
         {
-        int i=j+1;
-        for(int k=i;k<nums.size();k++)
-        {
-            if(nums[k]!=0)
-            {
-                swap(nums[k],nums[j]);
-                j++;
-            }
+            arr[i]=0;
         }
-        }
-
+        
+        
         
     }
-};
