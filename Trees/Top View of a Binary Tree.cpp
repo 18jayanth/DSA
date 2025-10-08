@@ -12,7 +12,11 @@ class Node {
     }
 };
 */
-
+// push the root and with its line to queue
+//if line is never in the map push it to map else ignore
+//push if the node has any left or right nodes
+//repeat till all the nodes in queue complated
+//traverse the map map being in the sorted order we will get accurate result
 class Solution {
   public:
     vector<int> topView(Node *root) {
