@@ -1,7 +1,7 @@
 class Solution {
 public:
+//traverse till root becomes null or u get the result
     TreeNode* searchBST(TreeNode* root, int val) {
-        if (!root) return NULL;
         while(root && root->val!=val)
         {
         if(root->val>val)
