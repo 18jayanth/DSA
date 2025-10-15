@@ -45,6 +45,7 @@ temp=temp->next;
 }
 Node* reverse(Node* head)
 {
+	if(!head || !head->next) return head;
 	Node*current=head;
 	Node*previous=NULL;
 	while(current!=NULL)
@@ -69,4 +70,5 @@ int main() {
     
 
     return 0;
+
 }
