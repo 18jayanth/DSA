@@ -17,8 +17,8 @@ public:
     bool isSubsequence(string s, string t) {
 
 
-        int a=s.size();
-        int b=t.size();
+        int b=s.size();
+        int a=t.size();
         return isSubsequence_rec( s, t,a,b);
        
 
