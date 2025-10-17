@@ -1,6 +1,6 @@
 void  inorder(TreeNode* root,int k,int& cnt,int& value)
 {
-    if(!root || cnt>=k) return  ;
+    if(!root || cnt>k) return  ;
      inorder(root->left,k,cnt,value);
     cnt++;
     if(cnt==k)
